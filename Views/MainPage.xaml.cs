@@ -21,9 +21,24 @@ namespace Views
 
         async void PageItemTapped(System.Object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
-            var pageList = (string[])Resources["PageArray"];
-            await Navigation.PushAsync(new LabelPage());
-            
+            var titles = (string[])Resources["PageArray"];
+            var title = titles[e.ItemIndex];
+
+            Page page = null;
+            switch (e.ItemIndex) {
+                case 0:
+                    page = new LabelPage() {
+                        Title = title
+                    };
+                    break;
+                case 1:
+                    page = new ButtonPage() {
+                        Title = title
+                    };
+                    break;
+            }
+
+            await Navigation.PushAsync(page);
         }
     }
 }

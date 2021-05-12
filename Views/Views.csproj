@@ -16,6 +16,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Presentation\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Binding\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Presentation\LabelPage.xaml.cs">

@@ -10,6 +10,7 @@ namespace Views.Presentation
         public LabelPage()
         {
             InitializeComponent();
+
         }
     }
 }

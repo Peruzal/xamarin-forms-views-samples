@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Views.Binding;
+using Views.Commands;
 using Views.Presentation;
 using Xamarin.Forms;
 
@@ -27,17 +22,17 @@ namespace Views
             Page page = null;
             switch (e.ItemIndex) {
                 case 0:
-                    page = new LabelPage() {
-                        Title = title
-                    };
+                    page = new LabelPage();
                     break;
                 case 1:
-                    page = new ButtonPage() {
-                        Title = title
-                    };
+                    page = new ButtonPage();
+                    break;
+                case 2:
+                    page = new ViewBindingDemoPage();
                     break;
             }
 
+            page.Title = title;
             await Navigation.PushAsync(page);
         }
     }

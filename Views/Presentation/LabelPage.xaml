@@ -5,6 +5,15 @@
     x:Class="Views.Presentation.LabelPage">
     <ContentPage.Content>
         <StackLayout>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="I" TextColor="Red" />
+                        <Span Text=" Love" FontAttributes="Bold" />
+                        <Span Text=" Xamarin.Forms" FontAttributes="Italic" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
             <Label Text="Default Font Size" FontSize="Default"/>
             <Label Text="Caption" FontSize="Caption"/>
             <Label Text="Body" FontSize="Body"/>
@@ -15,6 +24,13 @@
             <Label Text="Small" FontSize="Small"/>
             <Label Text="SubTitle" FontSize="Subtitle"/>
             <Label Text="Title" FontSize="Title"/>
+
+            <Label Text="Title" Style="{DynamicResource TitleStyle}"/>
+            <Label Text="SubTitle" Style="{DynamicResource SubtitleStyle}" />
+            <Label Text="Caption" Style="{DynamicResource CaptionStyle}"/>
+            <Label Text="Body" Style="{DynamicResource BodyStyle}"/>
+            <Label Text="ListItem" Style="{DynamicResource ListItemTextStyle}"/>
+            <Label Text="ListItemDetail" Style="{DynamicResource ListItemDetailTextStyle}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -8,6 +8,7 @@
       <x:Array Type="{x:Type x:String}" x:Key="PageArray">
           <x:String>Label</x:String>
           <x:String>Button</x:String>
+          <x:String>View Binding</x:String>
       </x:Array>
     </ResourceDictionary>
 </ContentPage.Resources>

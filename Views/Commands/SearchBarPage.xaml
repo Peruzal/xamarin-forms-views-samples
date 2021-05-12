@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Views"
+    x:Class="Views.Commands.SearchBarPage">
+<ContentPage.Resources>
+    <ResourceDictionary>
+      <x:Array Type="{x:Type x:String}" x:Key="PageArray">
+          <x:String>Label</x:String>
+          <x:String>Button</x:String>
+      </x:Array>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+
+<StackLayout>
+    <SearchBar Placeholder="Search" />
+    <ListView ItemsSource="{Binding Cities}" x:Name="listView"/>
+</StackLayout>
+</ContentPage>

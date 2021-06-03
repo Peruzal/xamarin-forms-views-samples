@@ -30,6 +30,9 @@ namespace Views
                 case 2:
                     page = new ViewBindingDemoPage();
                     break;
+                case 3:
+                    page = new MapPage();
+                    break;
             }
 
             page.Title = title;

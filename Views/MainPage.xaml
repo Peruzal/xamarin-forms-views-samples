@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="6,0,6,0"
              x:Class="Views.MainPage">
 
 <ContentPage.Resources>
@@ -9,9 +10,21 @@
           <x:String>Label</x:String>
           <x:String>Button</x:String>
           <x:String>View Binding</x:String>
+          <x:String>Map</x:String>
       </x:Array>
     </ResourceDictionary>
 </ContentPage.Resources>
-<ListView ItemsSource="{StaticResource PageArray}" ItemTapped="PageItemTapped" />
+<ListView
+    ItemsSource="{StaticResource PageArray}"
+    ItemTapped="PageItemTapped"
+    SelectionMode="None">
+    <ListView.ItemTemplate>
+        <DataTemplate>
+            <ViewCell>
+                <Label Text="{Binding .}" VerticalOptions="Center" Style="{DynamicResource ListItemDetailStyle}"/>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
 
 </ContentPage>
